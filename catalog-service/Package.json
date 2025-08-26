@@ -1,0 +1,58 @@
+{
+  "name": "catalog-service",
+  "version": "1.0.0",
+  "description": "Product catalog microservice for shopping assistant",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "seed": "node scripts/seed.js",
+    "clear-db": "node scripts/clearDb.js",
+    "docker:build": "docker build -t shopping-assistant/catalog-service:latest .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env shopping-assistant/catalog-service:latest"
+  },
+  "keywords": [
+    "catalog",
+    "products",
+    "microservice",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Shopping Assistant Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.1",
+    "@types/jest": "^29.5.8"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/shopping-assistant"
+  }
+}
