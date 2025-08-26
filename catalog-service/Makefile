@@ -110,9 +110,9 @@ logs:
 
 # Start MongoDB locally (if using Docker)
 start-mongo:
-	docker run -d \
-		--name mongodb-local \
-		-p 27017:27017 \
-		-e MONGO_INITDB_ROOT_USERNAME=shopping_user \
-		-e MONGO_INITDB_ROOT_PASSWORD=shopping_pass \
-		-
+    docker run -d \
+        --name mongodb-local \
+        -p 27017:27017 \
+        -e MONGO_INITDB_ROOT_USERNAME=shopping_user \
+        -e MONGO_INITDB_ROOT_PASSWORD=shopping_pass \
+        mongo:latest
